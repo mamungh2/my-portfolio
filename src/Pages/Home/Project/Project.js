@@ -11,7 +11,8 @@ const Project = ({ project }) => {
     return (
         <Grid item xs={12} md={6}>
             {
-                id === 0 || id === 2 || id === 4 ?
+                id === 0 || id === 2 || id === 4
+                    ?
                     <ScrollAnimation animateIn="bounceInLeft">
                         <Card elevation={12} sx={{ maxWidth: 445, py: 1, margin: '0 auto' }} >
                             <CardMedia sx={{ width: '30%', height: '100%', margin: '0 auto' }}
@@ -33,7 +34,9 @@ const Project = ({ project }) => {
                                 <Link to={`allProject/${id}`} style={{ textDecoration: 'none', margin: '0 auto' }}><Button variant="contained">Details</Button></Link>
                             </CardActions>
                         </Card>
-                    </ScrollAnimation> : <ScrollAnimation animateIn="bounceInRight">
+                    </ScrollAnimation>
+                    :
+                    <ScrollAnimation animateIn="bounceInRight">
                         <Card elevation={12} sx={{ maxWidth: 445, py: 1, margin: '0 auto' }} >
                             <CardMedia sx={{ width: '30%', height: '100%', margin: '0 auto' }}
                                 component="img"

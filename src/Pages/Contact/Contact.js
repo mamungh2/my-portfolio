@@ -1,4 +1,4 @@
-import { Alert, Button, Container, Grid, TextField, Typography } from '@mui/material';
+import { Alert, Button, Container, Grid, TextField, Typography, Box } from '@mui/material';
 import React from 'react';
 import { useState } from 'react';
 import { send } from 'emailjs-com';
@@ -42,7 +42,7 @@ const Contact = () => {
                     <Grid item xs={12} md={8} sx={{ margin: '0 auto' }}>
                         {success && <Alert severity="success">Message sent successfully!</Alert>}
                         <Typography sx={{ mt: 4, mb: 2 }} variant="h3" component="div" gutterBottom>
-                            Contact Me
+                            <Box component="span" sx={{ color: 'green', fontWeight: 'bold' }}>Contact</Box> Me
                         </Typography>
                         <form onSubmit={onSubmit}>
                             <TextField
