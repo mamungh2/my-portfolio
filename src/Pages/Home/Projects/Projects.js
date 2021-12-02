@@ -39,7 +39,7 @@ const Projects = () => {
     return (
         <Container>
             <Typography sx={{ my: 5 }} variant="h3" component="div" gutterBottom>
-                My Projects
+                <span style={{ color: 'green', fontWeight: 'bold' }}>My</span> Projects
             </Typography>
             <Grid container rowSpacing={6} columnSpacing={{ xs: 2, sm: 2, md: 1 }}>
                 {
@@ -47,7 +47,7 @@ const Projects = () => {
                 }
             </Grid>
         </Container>
-    );
+    )
 };
 
 export default Projects;

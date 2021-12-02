@@ -51,7 +51,7 @@ const AllProject = () => {
     return (
         <Container>
             <Typography sx={{ my: 5 }} variant="h3" component="div" gutterBottom>
-                Explore all of my projects
+                <Box component="span" sx={{ color: 'green', fontWeight: 'bold' }}>Explore</Box> all of my projects
             </Typography>
             <Grid container rowSpacing={6} columnSpacing={{ xs: 2, sm: 2, md: 1 }}>
                 {

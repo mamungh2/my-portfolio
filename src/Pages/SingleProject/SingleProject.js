@@ -1,5 +1,6 @@
-import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography } from '@mui/material';
+import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography, Box } from '@mui/material';
 import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 import { Link, useParams } from 'react-router-dom';
 
 const allProject = [
@@ -52,35 +53,37 @@ const SingleProject = () => {
     return (
         <Grid item xs={12} md={12}>
             <Typography variant="h3" sx={{ mt: 5, mb: 0 }} component="div">
-                Product Details
+                <Box component="span" sx={{ color: 'green', fontWeight: 'bold' }}>Project</Box> Details
             </Typography>
-            <Card elevation={12} sx={{
-                margin: '20px auto',
-                maxWidth: 800, py: 1,
-                height: '100%',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between'
-            }} >
-                <CardMedia sx={{ width: '98%', margin: '0 auto' }}
-                    component="img"
-                    image={allProject[`${projectId}`]?.img}
-                    alt="green iguana"
-                />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                        {allProject[`${projectId}`]?.name}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary" textAlign="left">
-                        {allProject[`${projectId}`]?.description}
-                    </Typography>
-                </CardContent>
-                <CardActions sx={{ display: 'flex', justifyContent: 'center' }}>
-                    <Link to={{ pathname: `${allProject[`${projectId}`]?.liveSite}` }} target='_blank' style={{ textDecoration: 'none', color: 'white' }}><Button style={{ margin: '0 auto' }} variant="contained">Live site</Button></Link>
-                    <Link to={{ pathname: `${allProject[`${projectId}`]?.clientCode}` }} target='_blank' style={{ textDecoration: 'none', color: 'white' }}><Button style={{ margin: '0 auto' }} variant="contained">Client code</Button></Link>
-                    {allProject[`${projectId}`]?.serverCode && <Link to={{ pathname: `${allProject[`${projectId}`]?.serverCode}` }} target='_blank' style={{ textDecoration: 'none', color: 'white' }}><Button style={{ margin: '0 auto' }} variant="contained">Server Code</Button></Link>}
-                </CardActions>
-            </Card>
+            <ScrollAnimation animateIn="bounceInLeft">
+                <Card elevation={12} sx={{
+                    margin: '20px auto',
+                    maxWidth: 800, py: 1,
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between'
+                }} >
+                    <CardMedia sx={{ width: '98%', margin: '0 auto' }}
+                        component="img"
+                        image={allProject[`${projectId}`]?.img}
+                        alt="green iguana"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                            {allProject[`${projectId}`]?.name}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary" textAlign="left">
+                            {allProject[`${projectId}`]?.description}
+                        </Typography>
+                    </CardContent>
+                    <CardActions sx={{ display: 'flex', justifyContent: 'center' }}>
+                        <Link to={{ pathname: `${allProject[`${projectId}`]?.liveSite}` }} target='_blank' style={{ textDecoration: 'none', color: 'white' }}><Button style={{ margin: '0 auto' }} variant="contained">Live site</Button></Link>
+                        <Link to={{ pathname: `${allProject[`${projectId}`]?.clientCode}` }} target='_blank' style={{ textDecoration: 'none', color: 'white' }}><Button style={{ margin: '0 auto' }} variant="contained">Client code</Button></Link>
+                        {allProject[`${projectId}`]?.serverCode && <Link to={{ pathname: `${allProject[`${projectId}`]?.serverCode}` }} target='_blank' style={{ textDecoration: 'none', color: 'white' }}><Button style={{ margin: '0 auto' }} variant="contained">Server Code</Button></Link>}
+                    </CardActions>
+                </Card>
+            </ScrollAnimation>
         </Grid >
     );
 };

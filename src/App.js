@@ -11,6 +11,8 @@ import Contact from './Pages/Contact/Contact';
 import AllProject from './Pages/AllProject/AllProject';
 import SingleProject from './Pages/SingleProject/SingleProject';
 import NotFound from './Pages/NotFound/NotFound';
+import Blogs from './Pages/Blogs/Blogs';
+
 
 function App() {
   return (
@@ -29,6 +31,9 @@ function App() {
           </Route>
           <Route path="/allProject/:projectId">
             <SingleProject></SingleProject>
+          </Route>
+          <Route path="/blogs">
+            <Blogs></Blogs>
           </Route>
           <Route path="/contact">
             <Contact></Contact>

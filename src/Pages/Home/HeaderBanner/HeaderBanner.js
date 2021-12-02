@@ -4,6 +4,7 @@ import { Box, Button, Grid, Typography } from '@mui/material';
 import mypic from '../../../images/mypic.jpg';
 import { Link } from 'react-router-dom';
 import resume from '../../../images/Md. Rafiqul Islam Mamun-resume.pdf';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const HeaderBanner = () => {
     const bannerBg = {
@@ -22,9 +23,11 @@ const HeaderBanner = () => {
                         <Typography sx={{ color: 'lightGray' }} variant="h6" component="div" gutterBottom>
                             Hi, I'am
                         </Typography>
-                        <Typography sx={{ color: 'white', fontWeight: 'bold', fontSize: '50px' }} variant="h4" component="div" gutterBottom>
-                            Rafiqul Islam Mamun
-                        </Typography>
+                        <ScrollAnimation animateIn="bounceInLeft">
+                            <Typography sx={{ color: 'white', fontWeight: 'bold', fontSize: '50px' }} variant="h4" component="div" gutterBottom>
+                                Rafiqul Islam Mamun
+                            </Typography>
+                        </ScrollAnimation>
                         <Typography sx={{ color: 'white', mb: 0 }} variant="h4" component="div" gutterBottom>
                             React Web Developer
                         </Typography>
@@ -35,10 +38,12 @@ const HeaderBanner = () => {
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={6} sx={{ display: 'flex', justifyContent: 'center', mt: 5 }}>
-                    <img style={{ borderRadius: '100px 0 80px 0px' }} src={mypic} alt="" />
+                    <ScrollAnimation animateIn="rotateIn">
+                        <img style={{ borderRadius: '100px 0 80px 0px' }} src={mypic} alt="" />
+                    </ScrollAnimation>
                 </Grid>
             </Grid>
-        </Box>
+        </Box >
     );
 };
 
