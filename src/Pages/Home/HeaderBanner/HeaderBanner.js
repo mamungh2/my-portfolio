@@ -3,7 +3,7 @@ import bg from '../../../images/headerbanner.jpg';
 import { Box, Button, Grid, Typography } from '@mui/material';
 import mypic from '../../../images/mypic.jpg';
 import { Link } from 'react-router-dom';
-import resume from '../../../images/Md. Rafiqul Islam Mamun-resume.pdf';
+import resume from '../../../images/Md. Rafiqul Islam Mamun_resume.pdf';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 const HeaderBanner = () => {
@@ -29,7 +29,7 @@ const HeaderBanner = () => {
                             </Typography>
                         </ScrollAnimation>
                         <Typography sx={{ color: 'white', mb: 0 }} variant="h4" component="div" gutterBottom>
-                            React Web Developer
+                            React Developer
                         </Typography>
                         <Typography sx={{ color: 'red' }} variant="h5" component="div" gutterBottom>
                             Based in Bangladesh
