@@ -12,7 +12,7 @@ const projects = [
     {
         id: 1,
         name: 'Mamun Courier Services',
-        img: 'https://i.ibb.co/2qxRPSh/mamuncourier.jpg',
+        img: 'https://i.ibb.co/dgRyVJy/mamuncourier1.jpg',
         description: "It is Courier services website. A simple react project with very amazing functionalities. In this project I have used React as javascript library for building user interfaces, react router for routing different pages, bootstrap as html,css and javascript framework. I have used firebase as user authentication purposes. For storing data I have used Mongodb atlas database system."
     },
     {
